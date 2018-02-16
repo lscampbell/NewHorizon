@@ -82,7 +82,7 @@ namespace PlutoRover
                 case "N": return new Location{
                             Heading = position.Heading,
                             X = position.X,
-                            Y = position.Y -= 1
+                            Y = position.Y == 0 ? map.MaxY : position.Y -= 1
                         };
                 case "E": return new Location{
                             Heading = position.Heading,
