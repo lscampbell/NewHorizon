@@ -5,9 +5,9 @@ namespace PlutoRover
     public class Rover
     {
         Location _position;
-        public Rover()
+        public Rover(int x = 0, int y = 0, string heading = "N")
         {
-            _position = new Location { Heading = "N", X = 0, Y = 0 };
+            _position = new Location { Heading = heading, X = x, Y = y };
         }
 
         public void Move(string[] moves)
@@ -19,6 +19,8 @@ namespace PlutoRover
             switch(direction)
             {
                 case "F": _position = Forward(_position);
+                    break;
+                case "B": _position = Back(_position);
                     break;
             }
         }
@@ -32,12 +34,54 @@ namespace PlutoRover
         {
             switch(position.Heading)
             {
-                case "N":
-                    return new Location{
+                case "N": return new Location{
                         Heading = position.Heading,
                         X = position.X,
                         Y = position.Y += 1
                     };
+                case "E": return new Location{
+                        Heading = position.Heading,
+                        X = position.X += 1,
+                        Y = position.Y
+                    };
+                case "S": return new Location{
+                        Heading = position.Heading,
+                        X = position.X,
+                        Y = position.Y -= 1
+                    };
+                case "W": return new Location{
+                        Heading = position.Heading,
+                        X = position.X -= 1,
+                        Y = position.Y
+                    };
+            }
+            return position;
+        }
+
+        Location Back(Location position)
+        {
+            switch(position.Heading)
+            {
+                case "N": return new Location{
+                            Heading = position.Heading,
+                            X = position.X,
+                            Y = position.Y -= 1
+                        };
+                case "E": return new Location{
+                            Heading = position.Heading,
+                            X = position.X -= 1,
+                            Y = position.Y
+                        };
+                case "S": return new Location{
+                            Heading = position.Heading,
+                            X = position.X,
+                            Y = position.Y += 1
+                        };
+                case "W": return new Location{
+                            Heading = position.Heading,
+                            X = position.X += 1,
+                            Y = position.Y
+                        };
             }
             return position;
         } 
