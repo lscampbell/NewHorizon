@@ -1675,6 +1675,16 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "PlutoRover/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PlutoRover.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PlutoRover.dll": {}
+        }
       }
     }
   },
@@ -5702,12 +5712,18 @@
         "xunit.runner.visualstudio.2.3.1.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "PlutoRover/1.0.0": {
+      "type": "project",
+      "path": "../PlutoRover/PlutoRover.csproj",
+      "msbuildProject": "../PlutoRover/PlutoRover.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NET.Test.Sdk >= 15.5.0",
       "Microsoft.NETCore.App >= 2.0.0",
+      "PlutoRover >= 1.0.0",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
     ]
@@ -5739,7 +5755,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\NewHorizon\\PlutoRover\\PlutoRover.csproj": {
+              "projectPath": "C:\\dev\\NewHorizon\\PlutoRover\\PlutoRover.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

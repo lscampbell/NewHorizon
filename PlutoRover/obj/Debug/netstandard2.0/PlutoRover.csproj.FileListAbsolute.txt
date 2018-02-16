@@ -1,0 +1,8 @@
+C:\dev\NewHorizon\PlutoRover\bin\Debug\netstandard2.0\PlutoRover.deps.json
+C:\dev\NewHorizon\PlutoRover\bin\Debug\netstandard2.0\PlutoRover.dll
+C:\dev\NewHorizon\PlutoRover\bin\Debug\netstandard2.0\PlutoRover.pdb
+C:\dev\NewHorizon\PlutoRover\obj\Debug\netstandard2.0\PlutoRover.csproj.CoreCompileInputs.cache
+C:\dev\NewHorizon\PlutoRover\obj\Debug\netstandard2.0\PlutoRover.AssemblyInfoInputs.cache
+C:\dev\NewHorizon\PlutoRover\obj\Debug\netstandard2.0\PlutoRover.AssemblyInfo.cs
+C:\dev\NewHorizon\PlutoRover\obj\Debug\netstandard2.0\PlutoRover.dll
+C:\dev\NewHorizon\PlutoRover\obj\Debug\netstandard2.0\PlutoRover.pdb

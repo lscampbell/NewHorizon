@@ -1,0 +1,15 @@
+C:\dev\NewHorizon\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.csproj.CoreCompileInputs.cache
+C:\dev\NewHorizon\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.AssemblyInfoInputs.cache
+C:\dev\NewHorizon\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.AssemblyInfo.cs
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.deps.json
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.runtimeconfig.json
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.runtimeconfig.dev.json
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.dll
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.pdb
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.dll
+C:\dev\NewHorizon\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.pdb
+C:\dev\NewHorizon\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.dll
+C:\dev\NewHorizon\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.pdb
