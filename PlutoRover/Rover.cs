@@ -5,9 +5,15 @@ namespace PlutoRover
     public class Rover
     {
         Location _position;
-        public Rover(int x = 0, int y = 0, string heading = "N")
+        Area _map;
+        public Rover(int x = 0, 
+                     int y = 0, 
+                     string heading = "N", 
+                     int xMax= 100, 
+                     int yMax = 100)
         {
             _position = new Location { Heading = heading, X = x, Y = y };
+            _map = new Area { MaxX = xMax, MaxY = yMax };
         }
 
         public void Move(string[] moves)
@@ -25,9 +31,9 @@ namespace PlutoRover
         {
             switch (direction)
             {
-                case "F": _position = Forward(_position);
+                case "F": _position = Forward(_position, _map);
                     break;
-                case "B": _position = Back(_position);
+                case "B": _position = Back(_position, _map);
                     break;
                 case "L": _position.Heading = Left(_position.Heading);
                     break;
@@ -41,14 +47,14 @@ namespace PlutoRover
             return $"{_position.X},{_position.Y},{_position.Heading}";
         }
 
-        Location Forward(Location position)
+        Location Forward(Location position, Area map)
         {
             switch(position.Heading)
             {
                 case "N": return new Location{
                         Heading = position.Heading,
                         X = position.X,
-                        Y = position.Y += 1
+                        Y = position.Y == map.MaxY ? 0 : position.Y += 1
                     };
                 case "E": return new Location{
                         Heading = position.Heading,
@@ -69,7 +75,7 @@ namespace PlutoRover
             return position;
         }
 
-        Location Back(Location position)
+        Location Back(Location position, Area map)
         {
             switch(position.Heading)
             {
