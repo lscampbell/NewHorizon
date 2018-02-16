@@ -12,20 +12,31 @@ namespace PlutoRover
 
         public void Move(string[] moves)
         {
+            foreach(var direction in moves)
+                Execute(direction);
         }
 
         public void Move(string direction)
         {
-            switch(direction)
+            Execute(direction);
+        }
+
+        void Execute(string direction)
+        {
+            switch (direction)
             {
                 case "F": _position = Forward(_position);
                     break;
                 case "B": _position = Back(_position);
                     break;
+                case "L": _position.Heading = Left(_position.Heading);
+                    break;
+                case "R": _position.Heading = Right(_position.Heading);
+                    break;
             }
         }
 
-        public string GetLocation()
+    public string GetLocation()
         {
             return $"{_position.X},{_position.Y},{_position.Heading}";
         }
@@ -84,6 +95,38 @@ namespace PlutoRover
                         };
             }
             return position;
+        }
+        
+        string Left(string heading)
+        {
+            switch(heading)
+            {
+                case "N":
+                        return "W";
+                case "E":
+                        return "N";
+                case "S":
+                        return  "E";
+                case "W":
+                        return  "S";
+            }
+            return heading;
+        }
+        
+        string Right(string heading)
+        {
+            switch(heading)
+            {
+                case "N":
+                        return "E";
+                case "E":
+                        return "S";
+                case "S":
+                        return "W";
+                case "W":
+                        return "N";
+            }
+            return heading;
         } 
     }
 }
