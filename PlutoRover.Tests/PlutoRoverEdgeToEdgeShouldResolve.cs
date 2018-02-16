@@ -8,34 +8,56 @@ namespace PlutoRover.test
         [Fact]
         public void WhenAskedToMoveOffMapNorthShould()
         {
-            var Rover = new Rover(0, 9, "N", 9, 9);
+            var rover = new Rover(0, 9, "N", 9, 9);
             var moves = new string[] {"F"};
             
-            Rover.Move(moves);
+            rover.Move(moves);
             
-            Assert.Equal("0,0,N", Rover.GetLocation());
+            Assert.Equal("0,0,N", rover.GetLocation());
         }
 
         [Fact]
         public void WhenAskedToMoveOffMapSouthShould()
         {
-            var Rover = new Rover(0, 0, "N", 9, 9);
+            var rover = new Rover(0, 0, "N", 9, 9);
             var moves = new string[] {"B"};
             
-            Rover.Move(moves);
+            rover.Move(moves);
             
-            Assert.Equal("0,9,N", Rover.GetLocation());
+            Assert.Equal("0,9,N", rover.GetLocation());
         }
         
         [Fact]
         public void WhenAskedToMoveOffMapAFewTimesShould()
         {
-            var Rover = new Rover(0, 9, "N", 9, 9);
+            var rover = new Rover(0, 9, "N", 9, 9);
             var moves = new string[] {"F","L","F","L","F","L","F","L"};
 
-            Rover.Move(moves);
+            rover.Move(moves);
             
-            Assert.Equal("0,9,N", Rover.GetLocation());
+            Assert.Equal("0,9,N", rover.GetLocation());
+        }
+
+        [Fact]
+        public void WhenAskedToMoveAroundMapAFewTimesShould()
+        {
+            var rover = new Rover(0, 9, "N", 9, 9);
+            var moves = new string[] {"F","L","L","L","F","R","F"};
+
+            rover.Move(moves);
+
+            Assert.Equal("1,9,S", rover.GetLocation());
+        }
+        
+        [Fact]
+        public void WhenAskedToMoveAroundMapBackwardsShould()
+        {
+            var rover = new Rover(0, 0, "N", 9, 9);
+            var moves = new string[] {"B","R","B","R","B","R","B","R"};
+
+            rover.Move(moves);
+            
+            Assert.Equal("0,0,N", rover.GetLocation());
         }
     }
 }

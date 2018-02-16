@@ -9,10 +9,10 @@ namespace PlutoRover.Tests
         [Fact]
         public void WhenAskedToMoveShould()
         {
-            var Rover = new Rover();
+            var rover = new Rover();
             var moves = new string[] {"F","F","R","F","F"};
-            Rover.Move(moves);
-            Assert.Equal("2,2,E", Rover.GetLocation());
+            rover.Move(moves);
+            Assert.Equal("2,2,E", rover.GetLocation());
         }
     }
 }
