@@ -58,17 +58,17 @@ namespace PlutoRover
                     };
                 case "E": return new Location{
                         Heading = position.Heading,
-                        X = position.X += 1,
+                        X = position.X == map.MaxX ? 0 : position.X += 1,
                         Y = position.Y
                     };
                 case "S": return new Location{
                         Heading = position.Heading,
                         X = position.X,
-                        Y = position.Y -= 1
+                        Y = position.Y == 0 ? map.MaxY : position.Y -= 1
                     };
                 case "W": return new Location{
                         Heading = position.Heading,
-                        X = position.X -= 1,
+                        X = position.X == 0 ? map.MaxX : position.X -= 1,
                         Y = position.Y
                     };
             }
@@ -86,17 +86,17 @@ namespace PlutoRover
                         };
                 case "E": return new Location{
                             Heading = position.Heading,
-                            X = position.X -= 1,
+                            X =  position.X == 0 ? map.MaxX : position.X -= 1,
                             Y = position.Y
                         };
                 case "S": return new Location{
                             Heading = position.Heading,
                             X = position.X,
-                            Y = position.Y += 1
+                            Y = position.Y == map.MaxY ? 0 : position.Y += 1
                         };
                 case "W": return new Location{
                             Heading = position.Heading,
-                            X = position.X += 1,
+                            X = position.X == map.MaxX ? 0 : position.X += 1,
                             Y = position.Y
                         };
             }

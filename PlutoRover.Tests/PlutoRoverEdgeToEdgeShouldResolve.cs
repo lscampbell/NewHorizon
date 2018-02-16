@@ -26,5 +26,16 @@ namespace PlutoRover.test
             
             Assert.Equal("0,9,N", Rover.GetLocation());
         }
+        
+        [Fact]
+        public void WhenAskedToMoveOffMapAFewTimesShould()
+        {
+            var Rover = new Rover(0, 9, "N", 9, 9);
+            var moves = new string[] {"F","L","F","L","F","L","F","L"};
+
+            Rover.Move(moves);
+            
+            Assert.Equal("0,9,N", Rover.GetLocation());
+        }
     }
 }
