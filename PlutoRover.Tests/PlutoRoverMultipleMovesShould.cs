@@ -7,13 +7,12 @@ namespace PlutoRover.Tests
 
     {
         [Fact]
-        public void WhenRequestedToMoveForwardShould()
+        public void WhenAskedToMoveShould()
         {
-            var rover = new Rover();
-
-            rover.Move("F");
-
-            Assert.Equal("0,1,N", rover.GetLocation());
+            var Rover = new Rover();
+            var moves = new string[] {"F","F","R","F","F"};
+            Rover.Move(moves);
+            Assert.Equal("2,2,E", Rover.GetLocation());
         }
     }
 }

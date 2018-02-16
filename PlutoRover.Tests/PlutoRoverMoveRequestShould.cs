@@ -6,9 +6,11 @@ namespace PlutoRover.Tests
     public class PlutoRoverMoveRequestShould
     {
         [Fact]
-        public void Test1()
+        public void WhenRequestedToMoveForwardShould()
         {
-
+            var rover = new Rover();
+            rover.Move("F");
+            Assert.Equal("0,1,N", rover.GetLocation());
         }
     }
 }
